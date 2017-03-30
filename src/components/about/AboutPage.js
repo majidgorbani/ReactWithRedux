@@ -2,12 +2,12 @@ import React from 'react';
 
 class AboutPage extends React.Component{
 
-    renter(){
+    render(){
 
         return(
-            <div>
+            <div className="jumbotron">
              <h1>About</h1>
-             <p>This applicaion uses React , redux, ...</p>               
+             <p>This applicaion uses React , redux, ...</p>             
                 
             </div>
 
