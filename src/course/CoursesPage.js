@@ -3,10 +3,11 @@ import React, {PropTypes} from 'react';
 class CoursesPage extends React.Component{
     constructor(props, context){
         super(props, context);
-
+        
         this.state={
             course: { title: "" }
         };
+
         this.onClickSave=this.onClickSave.bind(this);
         this.onTitleChange=this.onTitleChange.bind(this);
     }
@@ -17,7 +18,7 @@ class CoursesPage extends React.Component{
         this.setState({course: course});
     }
     onClickSave(){
-        alert('Saving '+ this.state.course.title);
+        alert(`Saving ${ this.state.course.title}`);
     }
 
     render(){
@@ -27,7 +28,7 @@ class CoursesPage extends React.Component{
                 <h2>Add Courses</h2>
                 <input
                     onChange={this.onTitleChange}
-                    value={this.state.title} />
+                    value={this.state.course.title} />
 
                 <input
                     type="submit"
